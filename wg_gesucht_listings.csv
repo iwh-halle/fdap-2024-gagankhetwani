@@ -1,817 +1,131 @@
 price,location,room_size,num_rooms,amenities,listing_date,availability_date,duration_online
-,"5er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Flughafen |
-                        
-                        Mainzerstrasse 1",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Frankfurter |
-                        
-                        Rohrbachstr. 51",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Westend-Nord |
-                        
-                        Bockenheimer Landstraße 70",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main |
-                                                    
-                        Schwalbacherstraße 42",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Westend-Nord |
-                        
-                        Bockenheimer Landstraße 70",,,,,,
-,"5er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Niederrad |
-                        
-                        Königslacherstraße 28",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main |
-                                                    
-                        Schwalbacherstraße 42",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Schießhüttenstraße 26",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Schießhüttenstraße 26",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Schießhüttenstraße 26",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Schwalbach am Taunus |
-                        
-                        Sachsenhausener Str.",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Heddernheim |
-                        
-                        Zeilweg",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Ostend |
-                        
-                        Uhlandstraße 00 EGre",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Westend |
-                        
-                        Reuterweg 77",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Innenstadt |
-                        
-                        In der Nahe von Evangelis...",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Ostend |
-                        
-                        Uhlandstraße 4.OGli",,,,,,
-,"6er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Frankfurt am Main |
-                        
-                        Okriftelerstrasse",,,,,,
-,"6er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Sindlingen |
-                        
-                        Okrifteler Str",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Innenstadt |
-                        
-                        Opernplatz",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Rendelerstraße",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Nordend-Ost |
-                        
-                        Sandweg Nordend 27",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Ostparkstraße 45a",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Sachsenhausen |
-                        
-                        Ossietzkystraße",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bahnhofsviertel |
-                        
-                        Mainzer Landstraße Gallus...",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bockenheim |
-                        
-                        Kettenhofweg Westend 75",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bockenheim |
-                        
-                        Leipziger Straßea Bockenh...",,,,,,
-,"5er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Flughafen |
-                        
-                        Mainzerstrasse 1",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Frankfurter |
-                        
-                        Rohrbachstr. 51",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Westend-Nord |
-                        
-                        Bockenheimer Landstraße 70",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main |
-                                                    
-                        Schwalbacherstraße 42",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Westend-Nord |
-                        
-                        Bockenheimer Landstraße 70",,,,,,
-,"5er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Niederrad |
-                        
-                        Königslacherstraße 28",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main |
-                                                    
-                        Schwalbacherstraße 42",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Schießhüttenstraße 26",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Schießhüttenstraße 26",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Schießhüttenstraße 26",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Schwalbach am Taunus |
-                        
-                        Sachsenhausener Str.",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Heddernheim |
-                        
-                        Zeilweg",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Ostend |
-                        
-                        Uhlandstraße 00 EGre",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Westend |
-                        
-                        Reuterweg 77",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Innenstadt |
-                        
-                        In der Nahe von Evangelis...",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Ostend |
-                        
-                        Uhlandstraße 4.OGli",,,,,,
-,"6er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Frankfurt am Main |
-                        
-                        Okriftelerstrasse",,,,,,
-,"6er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Sindlingen |
-                        
-                        Okrifteler Str",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Innenstadt |
-                        
-                        Opernplatz",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Rendelerstraße",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bockenheim |
-                        
-                        Kettenhofweg Westend 75",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bahnhofsviertel |
-                        
-                        Taunusstraße Bahnhofsvier...",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Ostparkstraße 45a",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Nordend-Ost |
-                        
-                        Berger Straße-42 Nordend 40",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Altstadt |
-                        
-                        Töngesgasse 31",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Fechenheim |
-                        
-                        Gref-Völsing-Straße 15",,,,,,
-,"5er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Flughafen |
-                        
-                        Mainzerstrasse 1",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Frankfurter |
-                        
-                        Rohrbachstr. 51",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Westend-Nord |
-                        
-                        Bockenheimer Landstraße 70",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main |
-                                                    
-                        Schwalbacherstraße 42",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Westend-Nord |
-                        
-                        Bockenheimer Landstraße 70",,,,,,
-,"5er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Niederrad |
-                        
-                        Königslacherstraße 28",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main |
-                                                    
-                        Schwalbacherstraße 42",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Schießhüttenstraße 26",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Schießhüttenstraße 26",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Schießhüttenstraße 26",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Schwalbach am Taunus |
-                        
-                        Sachsenhausener Str.",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Heddernheim |
-                        
-                        Zeilweg",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Ostend |
-                        
-                        Uhlandstraße 00 EGre",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Westend |
-                        
-                        Reuterweg 77",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Innenstadt |
-                        
-                        In der Nahe von Evangelis...",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Ostend |
-                        
-                        Uhlandstraße 4.OGli",,,,,,
-,"6er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Frankfurt am Main |
-                        
-                        Okriftelerstrasse",,,,,,
-,"6er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Sindlingen |
-                        
-                        Okrifteler Str",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Innenstadt |
-                        
-                        Opernplatz",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Rendelerstraße",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Ostparkstraße 45a",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Fechenheim |
-                        
-                        Gref-Völsing-Straße 15",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Innenstadt |
-                        
-                        Stalburgstraße Nordend 24",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Fechenheim |
-                        
-                        Gref-Völsing-Straße Osten...",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Petterweilstraße Nordend 31",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bockenheim |
-                        
-                        Leipziger Straße-43 Bocke...",,,,,,
-,"5er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Flughafen |
-                        
-                        Mainzerstrasse 1",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Frankfurter |
-                        
-                        Rohrbachstr. 51",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Westend-Nord |
-                        
-                        Bockenheimer Landstraße 70",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main |
-                                                    
-                        Schwalbacherstraße 42",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Westend-Nord |
-                        
-                        Bockenheimer Landstraße 70",,,,,,
-,"5er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Niederrad |
-                        
-                        Königslacherstraße 28",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main |
-                                                    
-                        Schwalbacherstraße 42",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Schießhüttenstraße 26",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Schießhüttenstraße 26",,,,,,
-,"4er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Schießhüttenstraße 26",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Schwalbach am Taunus |
-                        
-                        Sachsenhausener Str.",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Heddernheim |
-                        
-                        Zeilweg",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Ostend |
-                        
-                        Uhlandstraße 00 EGre",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Westend |
-                        
-                        Reuterweg 77",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Innenstadt |
-                        
-                        In der Nahe von Evangelis...",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Ostend |
-                        
-                        Uhlandstraße 4.OGli",,,,,,
-,"6er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Frankfurt am Main |
-                        
-                        Okriftelerstrasse",,,,,,
-,"6er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Sindlingen |
-                        
-                        Okrifteler Str",,,,,,
-,"3er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Innenstadt |
-                        
-                        Opernplatz",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Rendelerstraße",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Ostparkstraße 45a",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Fechenheim |
-                        
-                        Gref-Völsing-Straße Osten...",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bornheim |
-                        
-                        Ostparkstraße 45a",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Bockenheim |
-                        
-                        Rohmerstraße Bockenheim 8",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Nordend-Ost |
-                        
-                        Berger Straße-42 Nordend 40",,,,,,
-,"2er WG  
-                         |
-
-                                                                                    Frankfurt am Main
-                            
-                            Altstadt |
-                        
-                        Töngesgasse 31",,,,,,
+899,,,,,,,
+750,,,,,,,
+899,,,,,,,
+899,,,,,,,
+675,,,,,,,
+800,,,,,,,
+750,,,,,,,
+750,,,,,,,
+575,,,,,,,
+675,,,,,,,
+650,,,,,,,
+525,,,,,,,
+899,,,,,,,
+899,,,,,,,
+499,,,,,,,
+250,,,,,,,
+700,,,,,,,
+460,,,,,,,
+440,,,,,,,
+580,,,,,,,
+870,,,,,,,
+899,,,,,,,
+810,,,,,,,
+820,,,,,,,
+720,,,,,,,
+806,,,,,,,
+899,,,,,,,
+750,,,,,,,
+899,,,,,,,
+899,,,,,,,
+675,,,,,,,
+800,,,,,,,
+750,,,,,,,
+750,,,,,,,
+575,,,,,,,
+675,,,,,,,
+650,,,,,,,
+525,,,,,,,
+899,,,,,,,
+899,,,,,,,
+499,,,,,,,
+250,,,,,,,
+700,,,,,,,
+460,,,,,,,
+440,,,,,,,
+580,,,,,,,
+810,,,,,,,
+870,,,,,,,
+872,,,,,,,
+815,,,,,,,
+720,,,,,,,
+738,,,,,,,
+899,,,,,,,
+750,,,,,,,
+899,,,,,,,
+899,,,,,,,
+675,,,,,,,
+800,,,,,,,
+750,,,,,,,
+750,,,,,,,
+575,,,,,,,
+675,,,,,,,
+650,,,,,,,
+525,,,,,,,
+899,,,,,,,
+899,,,,,,,
+499,,,,,,,
+250,,,,,,,
+700,,,,,,,
+460,,,,,,,
+440,,,,,,,
+580,,,,,,,
+980,,,,,,,
+746,,,,,,,
+810,,,,,,,
+738,,,,,,,
+890,,,,,,,
+750,,,,,,,
+899,,,,,,,
+750,,,,,,,
+899,,,,,,,
+899,,,,,,,
+675,,,,,,,
+800,,,,,,,
+750,,,,,,,
+750,,,,,,,
+575,,,,,,,
+675,,,,,,,
+650,,,,,,,
+525,,,,,,,
+899,,,,,,,
+899,,,,,,,
+499,,,,,,,
+250,,,,,,,
+700,,,,,,,
+460,,,,,,,
+440,,,,,,,
+580,,,,,,,
+824,,,,,,,
+790,,,,,,,
+780,,,,,,,
+890,,,,,,,
+1170,,,,,,,
+750,,,,,,,
+899,,,,,,,
+750,,,,,,,
+899,,,,,,,
+899,,,,,,,
+675,,,,,,,
+800,,,,,,,
+750,,,,,,,
+750,,,,,,,
+575,,,,,,,
+675,,,,,,,
+650,,,,,,,
+525,,,,,,,
+899,,,,,,,
+899,,,,,,,
+499,,,,,,,
+250,,,,,,,
+700,,,,,,,
+460,,,,,,,
+440,,,,,,,
+580,,,,,,,
+965,,,,,,,
+1140,,,,,,,
+820,,,,,,,
+798,,,,,,,
+780,,,,,,,
+930,,,,,,,
