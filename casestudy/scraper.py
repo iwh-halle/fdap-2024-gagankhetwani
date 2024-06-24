@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import time
 
-# Base URL for the website with placeholder for page number
-base_url = "https://www.wg-gesucht.de/wg-zimmer-in-Frankfurt-am-Main.41.0.1.0.html"
+# Base URL for the website
+base_url = "https://www.wg-gesucht.de/wg-zimmer-in-Frankfurt-am-Main.41.0.1.0.html?pagination={page}"
 
 # Number of pages to scrape
 num_pages = 5  # Set the number of pages you want to scrape
@@ -17,7 +17,7 @@ def get_text_or_default(element, default='N/A'):
     return element.get_text(strip=True) if element else default
 
 # Loop through the specified number of pages
-for page in range(0, num_pages):
+for page in range(1, num_pages + 1):
     # Construct the URL for the current page
     url = base_url.format(page=page)
     
@@ -29,7 +29,7 @@ for page in range(0, num_pages):
     soup = BeautifulSoup(response.content, 'html.parser')
     
     # Find all listing elements
-    listings = soup.find_all('div', class_ ='wgg_card offer_list_item')
+    listings = soup.find_all('div', class_='wgg_card offer_list_item')
     if not listings:
         print(f"No listings found on page {page}, stopping.")
         break  # Stop if no more listings
@@ -48,12 +48,14 @@ for page in range(0, num_pages):
         listing_data['title'] = get_text_or_default(listing.find('h3', class_='truncate_title noprint'))
         
         # Extract the details
-        details = listing.find('div', class_ = 'col-xs-11')
+        details = listing.find('div', class_='col-xs-11')
         listing_data['details'] = get_text_or_default(details)
         
         # Extract the price
-        price = listing.find('b', class_='col-xs-3')
-        listing_data['price'] = get_text_or_default(price)
+        price = listing.find('div', class_='col-xs-3 text-right')
+        price_text = price.find('b') if price else None
+        listing_data['price'] = get_text_or_default(price_text)
+    
         
         # Extract the availability
         availability = listing.find('div', class_='col-xs-5 text-center')
@@ -77,7 +79,7 @@ for page in range(0, num_pages):
         listing_data['online_status'] = online_status
         
         # Extract the description
-        description = listing.find('div', class_ = 'col-xs-11')
+        description = listing.find('div', class_='col-xs-11')
         listing_data['description'] = get_text_or_default(description)
         
         # Append the listing data to the list
