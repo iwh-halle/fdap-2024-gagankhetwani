@@ -7,7 +7,7 @@ import time
 base_url = "https://www.wg-gesucht.de/wg-zimmer-in-Frankfurt-am-Main.41.0.1.0.html?pagination={page}"
 
 # Number of pages to scrape
-num_pages = 5  # Set the number of pages you want to scrape
+num_pages = 5
 
 # Initialize a list to store the data
 data = []
