@@ -19,7 +19,7 @@ def get_text_or_default(element, default='N/A'):
 # Loop through the specified number of pages
 for page in range(1, num_pages + 1):
     # Construct the URL for the current page
-    url = base_url.format(page=page)
+    url = base_url + f"?page={page}"
     
     # Make a request to the website
     response = requests.get(url)
@@ -51,8 +51,8 @@ for page in range(1, num_pages + 1):
         details = listing.find('div', class_='col-xs-11')
         listing_data['details'] = get_text_or_default(details)
         
-        # Extract the price (ensure the correct class and structure)
-        price = listing.find('div', class_='col-xs-3 text-right')
+        # Extract the price
+        price = listing.find('div', class_='col-xs-6 text-center')
         if price:
             price_b = price.find('b')
             listing_data['price'] = get_text_or_default(price_b)
@@ -64,7 +64,7 @@ for page in range(1, num_pages + 1):
         listing_data['availability'] = get_text_or_default(availability)
         
         # Extract the size
-        size = listing.find('div', class_='col-xs-3 text-center')
+        size = listing.find('div', class_='col-xs-3 text-right')
         if size:
             size_b = size.find('b')
             listing_data['size'] = get_text_or_default(size_b)
