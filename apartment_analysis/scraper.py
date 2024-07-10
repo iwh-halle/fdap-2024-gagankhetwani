@@ -110,11 +110,11 @@ from datetime import datetime
 # Load the data
 df = pd.read_csv('wg_gesucht_frankfurt_dynamic_manual_pages.csv')
 
-# Display the first few rows of the dataframe
-print(df.head())
-
 # Handle missing values (e.g., fill with median for simplicity)
 df.fillna(df.median(), inplace=True)
+
+# Display the first few rows of the dataframe
+print(df.head())
 
 # Convert price and size to numeric values (assuming they are in the format "XXX €" and "XX m²")
 df['price'] = df['price'].str.extract('(\d+)').astype(float)
@@ -170,7 +170,7 @@ model = sm.OLS(y, X).fit()
 
 # Print the summary of the regression model
 print(model.summary())
-from lifelines import Kaplan-MeierFitter, CoxPHFitter
+from lifelines import KaplanMeierFitter, CoxPHFitter
 
 # Kaplan-Meier Estimator
 kmf = Kaplan-MeierFitter()
