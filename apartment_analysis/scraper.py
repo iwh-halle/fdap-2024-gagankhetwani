@@ -4,10 +4,10 @@ import pandas as pd
 import time
 
 # Base URL for the website
-base_url = "https://www.wg-gesucht.de/wg-zimmer-in-Frankfurt-am-Main.41.0.1.0.html?pagination={page}"
+base_url = "https://www.wg-gesucht.de/wg-zimmer-in-Frankfurt-am-Main.41.0.1.0.html"
 
 # Number of pages to scrape
-num_pages = 5
+num_pages = 5  # Set the number of pages you want to scrape
 
 # Initialize a list to store the data
 data = []
@@ -51,20 +51,25 @@ for page in range(1, num_pages + 1):
         details = listing.find('div', class_='col-xs-11')
         listing_data['details'] = get_text_or_default(details)
         
-        # Extract the price
+        # Extract the price (ensure the correct class and structure)
         price = listing.find('div', class_='col-xs-3 text-right')
-        price_text = price.find('b') if price else None
-        listing_data['price'] = get_text_or_default(price_text)
+        if price:
+            price_b = price.find('b')
+            listing_data['price'] = get_text_or_default(price_b)
+        else:
+            listing_data['price'] = 'N/A'
     
-        
         # Extract the availability
         availability = listing.find('div', class_='col-xs-5 text-center')
         listing_data['availability'] = get_text_or_default(availability)
         
         # Extract the size
-        size_div = listing.find('div', class_='col-xs-3 text-right')
-        size = size_div.find('b') if size_div else None
-        listing_data['size'] = get_text_or_default(size)
+        size = listing.find('div', class_='col-xs-3 text-center')
+        if size:
+            size_b = size.find('b')
+            listing_data['size'] = get_text_or_default(size_b)
+        else:
+            listing_data['size'] = 'N/A'
         
         # Extract the landlord name
         landlord = listing.find('span', class_='ml5')
