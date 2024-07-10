@@ -48,11 +48,11 @@ for page in range(1, num_pages + 1):
         listing_data['title'] = get_text_or_default(listing.find('h3', class_='truncate_title noprint'))
         
         # Extract the details
-        details = listing.find('div', class_='col-xs-11')
+        details = listing.find('div', class_='col-lg-10')
         listing_data['details'] = get_text_or_default(details)
         
         # Extract the price
-        price = listing.find('div', class_='col-xs-6 text-center')
+        price = listing.find('div', class_='col-xs-3')
         if price:
             price_b = price.find('b')
             listing_data['price'] = get_text_or_default(price_b)
