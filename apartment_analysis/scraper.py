@@ -210,27 +210,49 @@ if not X.empty and not y.empty:
     # Print the summary of the regression model
     print(model.summary())
 
-    # Kaplan-Meier Estimator
-    kmf = KaplanMeierFitter()
-    kmf.fit(df['duration_online'], event_observed=(df['online_status'] != 'N/A'))
-    kmf.plot_survival_function()
-    plt.title('Survival Function of Listings')
-    plt.xlabel('Days Online')
-    plt.ylabel('Survival Probability')
-    plt.show()
-
-    # Cox Proportional Hazards Model
-    cph = CoxPHFitter()
-    cph_data = df[['duration_online', 'size', 'num_rooms', 'price']]
-    if not cph_data.empty:
-        cph.fit(cph_data, duration_col='duration_online', event_col=(df['online_status'] != 'N/A'))
-        cph.plot()
-        plt.title('Cox Proportional Hazards Model')
+    if not df.empty and all(column in df.columns for column in ['duration_online', 'size', 'num_rooms', 'price', 'online_status']):
+        # Kaplan-Meier Estimator
+        kmf = KaplanMeierFitter()
+        kmf.fit(df['duration_online'], event_observed=(df['online_status'] != 'N/A'))
+        kmf.plot_survival_function()
+        plt.title('Survival Function of Listings')
+        plt.xlabel('Days Online')
+        plt.ylabel('Survival Probability')
         plt.show()
-
-    # Visualization of regression results
-    sns.pairplot(df[['price', 'size', 'num_rooms', 'duration_online']])
-    plt.show()
+    
+        # Assuming 'online_status' column exists and 'N/A' indicates an event did not occur
+        df['event_observed'] = df['online_status'] != 'N/A'
+        
+        cph = CoxPHFitter()
+        cph_data = df[['duration_online', 'size', 'num_rooms', 'price', 'event_observed']]
+        if not cph_data.dropna().empty:  # Ensure there's no missing data in the relevant columns
+            cph.fit(cph_data.dropna(), duration_col='duration_online', event_col='event_observed')
+            cph.plot()
+            plt.title('Cox Proportional Hazards Model')
+            plt.show()
+        
+            # Visualization of regression results
+            sns.pairplot(df[['price', 'size', 'num_rooms', 'duration_online']].dropna())
+            plt.show()
+        else:
+            print("Insufficient data for regression analysis.")
+        
+        # Save the cleaned DataFrame, ensuring it's done outside and after all conditional blocks
+        df.to_csv('wg_gesucht_frankfurt_cleaned.csv', index=False)
+    else:
+        print("Insufficient data for regression analysis.")
+    
+    # Check if DataFrame is not empty and has non-null values in key columns
+    if not df.empty and df['duration_online'].notnull().any() and df['price'].notnull().any():
+        # Proceed with analysis only if there's sufficient data
+        # Example analysis code here
+        # plt.show() or any other analysis function can be placed here
+        pass  # Replace 'pass' with actual analysis code
+    else:
+        print("Insufficient data for regression analysis.")
+    
+    # Save the cleaned DataFrame, ensuring it's done outside and after all conditional blocks
+    df.to_csv('wg_gesucht_frankfurt_cleaned.csv', index=False)
 else:
     print("Insufficient data for regression analysis.")
 
