@@ -106,6 +106,7 @@ import seaborn as sns
 from datetime import datetime
 import statsmodels.api as sm
 from lifelines import KaplanMeierFitter, CoxPHFitter
+import re
 
 # Load the data
 df = pd.read_csv('wg_gesucht_frankfurt_dynamic_manual_pages.csv')
@@ -116,20 +117,43 @@ print(df.info())
 print(df.head())
 
 # Handle missing values (e.g., fill with median for simplicity)
-df.fillna(df.median(), inplace=True)
+df.fillna(df.median(numeric_only=True), inplace=True)
 
 # Convert price and size to numeric values (assuming they are in the format "XXX €" and "XX m²")
 df['price'] = df['price'].str.extract('(\d+)').astype(float)
+
+# Extract numeric part of size
 df['size'] = df['size'].str.extract('(\d+)').astype(float)
 
 # Convert availability date to datetime
 df['availability'] = pd.to_datetime(df['availability'], errors='coerce')
 
-# Extract features from 'details' if needed (example: extracting number of rooms)
-df['num_rooms'] = df['details'].str.extract('(\d+) Zimmer').astype(float)
+# Extract number of rooms
+df['num_rooms'] = df['details'].str.extract(r'(\d+)\s*Zimmer').astype(float)
 
-# Feature engineering: calculate duration online in days (assuming 'online_status' contains this info)
-df['duration_online'] = df['online_status'].str.extract('(\d+)').astype(float)
+# Convert online_status to a numeric duration in days
+def convert_online_status(status):
+    match = re.search(r'(\d+)', status)
+    if match:
+        number = int(match.group(1))
+        if 'Sekunden' in status:
+            return number / 86400  # Convert seconds to days
+        elif 'Minuten' in status:
+            return number / 1440  # Convert minutes to days
+        elif 'Stunden' in status:
+            return number / 24  # Convert hours to days
+        elif 'Tag' in status or 'Tage' in status:
+            return number  # Days
+        elif re.match(r'Online: \d{2}\.\d{2}\.\d{4}', status):  # Date format e.g., Online: 17.05.2024
+            listing_date = datetime.strptime(status, 'Online: %d.%m.%Y')
+            today = datetime.now()
+            return (today - listing_date).days
+    return np.nan
+
+df['duration_online'] = df['online_status'].apply(convert_online_status)
+
+# Drop rows with missing critical values
+df.dropna(subset=['price', 'size', 'num_rooms', 'duration_online'], inplace=True)
 
 # Display the cleaned dataframe info
 print("Cleaned Data Info:")
@@ -169,8 +193,8 @@ else:
     print("No numeric columns available for correlation.")
 
 # Define the independent variables (features) and the dependent variable (target)
-X = df[['size', 'num_rooms', 'duration_online']].dropna()
-y = df.loc[X.index, 'price']
+X = df[['size', 'num_rooms', 'duration_online']]
+y = df['price']
 
 print("Features and target variable data info:")
 print(X.info())
@@ -188,7 +212,7 @@ if not X.empty and not y.empty:
 
     # Kaplan-Meier Estimator
     kmf = KaplanMeierFitter()
-    kmf.fit(df['duration_online'].dropna(), event_observed=(df['online_status'] != 'N/A').dropna())
+    kmf.fit(df['duration_online'], event_observed=(df['online_status'] != 'N/A'))
     kmf.plot_survival_function()
     plt.title('Survival Function of Listings')
     plt.xlabel('Days Online')
@@ -197,15 +221,15 @@ if not X.empty and not y.empty:
 
     # Cox Proportional Hazards Model
     cph = CoxPHFitter()
-    cph_data = df[['duration_online', 'size', 'num_rooms', 'price']].dropna()
+    cph_data = df[['duration_online', 'size', 'num_rooms', 'price']]
     if not cph_data.empty:
-        cph.fit(cph_data, duration_col='duration_online', event_col=(df['online_status'] != 'N/A').loc[cph_data.index])
+        cph.fit(cph_data, duration_col='duration_online', event_col=(df['online_status'] != 'N/A'))
         cph.plot()
         plt.title('Cox Proportional Hazards Model')
         plt.show()
 
     # Visualization of regression results
-    sns.pairplot(df[['price', 'size', 'num_rooms', 'duration_online']].dropna())
+    sns.pairplot(df[['price', 'size', 'num_rooms', 'duration_online']])
     plt.show()
 else:
     print("Insufficient data for regression analysis.")
