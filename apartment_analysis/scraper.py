@@ -83,7 +83,6 @@ for page in range(1, num_pages + 1):
                 break
         listing_data['online_status'] = online_status
         
-        
         # Append the listing data to the list
         data.append(listing_data)
     
@@ -100,21 +99,24 @@ df.to_csv('wg_gesucht_frankfurt_dynamic_manual_pages.csv', index=False, encoding
 
 # Print the DataFrame
 print(df)
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
+import statsmodels.api as sm
+from lifelines import KaplanMeierFitter, CoxPHFitter
 
 # Load the data
 df = pd.read_csv('wg_gesucht_frankfurt_dynamic_manual_pages.csv')
 
+# Print initial data information
+print("Initial Data Info:")
+print(df.info())
+print(df.head())
+
 # Handle missing values (e.g., fill with median for simplicity)
 df.fillna(df.median(), inplace=True)
-
-# Display the first few rows of the dataframe
-print(df.head())
 
 # Convert price and size to numeric values (assuming they are in the format "XXX €" and "XX m²")
 df['price'] = df['price'].str.extract('(\d+)').astype(float)
@@ -129,7 +131,9 @@ df['num_rooms'] = df['details'].str.extract('(\d+) Zimmer').astype(float)
 # Feature engineering: calculate duration online in days (assuming 'online_status' contains this info)
 df['duration_online'] = df['online_status'].str.extract('(\d+)').astype(float)
 
-# Display the cleaned dataframe
+# Display the cleaned dataframe info
+print("Cleaned Data Info:")
+print(df.info())
 print(df.head())
 
 # Summary statistics
@@ -151,45 +155,60 @@ plt.xlabel('Size (m²)')
 plt.ylabel('Frequency')
 plt.show()
 
-# Correlation matrix
-plt.figure(figsize=(12, 8))
-sns.heatmap(df.corr(), annot=True, cmap='coolwarm')
-plt.title('Correlation Matrix')
-plt.show()
-import statsmodels.api as sm
+# Select only numeric columns for the correlation matrix
+numeric_cols = df.select_dtypes(include=[np.number]).columns
+
+# Ensure there are numeric columns to correlate
+if not numeric_cols.empty:
+    # Correlation matrix
+    plt.figure(figsize=(12, 8))
+    sns.heatmap(df[numeric_cols].corr(), annot=True, cmap='coolwarm')
+    plt.title('Correlation Matrix')
+    plt.show()
+else:
+    print("No numeric columns available for correlation.")
 
 # Define the independent variables (features) and the dependent variable (target)
-X = df[['size', 'num_rooms', 'duration_online']]  # Add more features if necessary
-y = df['price']
+X = df[['size', 'num_rooms', 'duration_online']].dropna()
+y = df.loc[X.index, 'price']
 
-# Add a constant to the independent variables
-X = sm.add_constant(X)
+print("Features and target variable data info:")
+print(X.info())
+print(y.info())
 
-# Fit the regression model
-model = sm.OLS(y, X).fit()
+if not X.empty and not y.empty:
+    # Add a constant to the independent variables
+    X = sm.add_constant(X)
 
-# Print the summary of the regression model
-print(model.summary())
-from lifelines import KaplanMeierFitter, CoxPHFitter
+    # Fit the regression model
+    model = sm.OLS(y, X).fit()
 
-# Kaplan-Meier Estimator
-kmf = Kaplan-MeierFitter()
-kmf.fit(df['duration_online'], event_observed=(df['online_status'] != 'N/A'))
-kmf.plot_survival_function()
-plt.title('Survival Function of Listings')
-plt.xlabel('Days Online')
-plt.ylabel('Survival Probability')
-plt.show()
+    # Print the summary of the regression model
+    print(model.summary())
 
-# Cox Proportional Hazards Model
-cph = CoxPHFitter()
-cph.fit(df[['duration_online', 'size', 'num_rooms', 'price']], duration_col='duration_online', event_col=(df['online_status'] != 'N/A'))
-cph.plot()
-plt.title('Cox Proportional Hazards Model')
-plt.show()
-# Visualization of regression results
-sns.pairplot(df[['price', 'size', 'num_rooms', 'duration_online']])
-plt.show()
+    # Kaplan-Meier Estimator
+    kmf = KaplanMeierFitter()
+    kmf.fit(df['duration_online'].dropna(), event_observed=(df['online_status'] != 'N/A').dropna())
+    kmf.plot_survival_function()
+    plt.title('Survival Function of Listings')
+    plt.xlabel('Days Online')
+    plt.ylabel('Survival Probability')
+    plt.show()
+
+    # Cox Proportional Hazards Model
+    cph = CoxPHFitter()
+    cph_data = df[['duration_online', 'size', 'num_rooms', 'price']].dropna()
+    if not cph_data.empty:
+        cph.fit(cph_data, duration_col='duration_online', event_col=(df['online_status'] != 'N/A').loc[cph_data.index])
+        cph.plot()
+        plt.title('Cox Proportional Hazards Model')
+        plt.show()
+
+    # Visualization of regression results
+    sns.pairplot(df[['price', 'size', 'num_rooms', 'duration_online']].dropna())
+    plt.show()
+else:
+    print("Insufficient data for regression analysis.")
 
 # Save the cleaned DataFrame
 df.to_csv('wg_gesucht_frankfurt_cleaned.csv', index=False)
