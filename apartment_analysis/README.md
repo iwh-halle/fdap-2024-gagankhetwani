@@ -1,19 +1,16 @@
 ### Description of the case study and instructions
 
-#### Objective:
+### Objective:
 This case study focuses on the apartment sharing market in Frankfurt, utilizing data collection, analysis, and interpretation to understand the determinants of apartment prices and the factors influencing the duration of WG (Wohngemeinschaft) listings on the WG-Gesucht platform. The ultimate deliverable is a README.md file summarizing the analysis and findings, with supporting evidence from literature and data analysis.
 
 ### Literature Review:
 Before conducting the web scraping, a literature review was performed to explore the factors affecting the housing market and related prices. The findings from this review are detailed in a dedicated chapter, where relevant literature is briefly summarized, providing initial reference points for the subsequent analysis.
 
-Throughout the time an ad is online, we monitor the suggestions on the WG-GESUCHT page to enhance the ad's performance. According to the website, ads with certain characteristics are filled particularly quickly. These characteristics are used as potential indicators for relevant influencing factors.
-
 The results of the literature review are documented in the Read.me file within the "literature_review" folder.
 
 
 ### Scraper: 
-Python script for web scraping WG-Gesucht
-
+The web scraping process is done in a file name scraper in the folder.
 
 
 
