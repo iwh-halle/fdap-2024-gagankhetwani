@@ -5,19 +5,19 @@ The document titled "Stimulating housing policy and housing tenure choice: Evide
 ### Key Findings
 
 1. **Governmental Policies and Homeownership**:
-   - Governmental policies positively affect homeownership rates and social housing rates. Policies such as provision of cheaper loans, loan guarantees, subsidies, and tax exemptions have been effective in increasing homeownership and social housing[1].
+   - Governmental policies positively affect homeownership rates and social housing rates. Policies such as provision of cheaper loans, loan guarantees, subsidies, and tax exemptions have been effective in increasing homeownership and social housing.
    - The study uses a leximetric approach to quantify these policies, creating composite indices to measure their impact.
 
 2. **Socioeconomic Determinants**:
-   - Age, income, household size, race, ethnicity, and immigration status are significant determinants of housing tenure choice. Middle-aged individuals with sufficient savings are more likely to own homes, while younger people tend to rent due to higher mobility and lower savings[1].
+   - Age, income, household size, race, ethnicity, and immigration status are significant determinants of housing tenure choice. Middle-aged individuals with sufficient savings are more likely to own homes, while younger people tend to rent due to higher mobility and lower savings.
 
 3. **Impact of Housing Policies**:
-   - Stimulating housing policies, though costly, are crucial for increasing the supply of affordable housing. These policies include both owner-occupied and social rental housing measures[1].
-   - The effectiveness of these policies varies across countries, with some nations like Germany focusing on subsidizing private landlords to provide low-cost dwellings to specific population groups[1].
+   - Stimulating housing policies, though costly, are crucial for increasing the supply of affordable housing. These policies include both owner-occupied and social rental housing measures.
+   - The effectiveness of these policies varies across countries, with some nations like Germany focusing on subsidizing private landlords to provide low-cost dwellings to specific population groups.
 
 4. **Homeownership and Social Housing Rates**:
-   - Homeownership rates have generally increased since World War II but experienced setbacks during economic downturns like the Great Recession of 2008-2009[1].
-   - Social housing sectors are significant in many European countries, often larger than private rental sectors, indicating strong governmental support for social housing[1].
+   - Homeownership rates have generally increased since World War II but experienced setbacks during economic downturns like the Great Recession of 2008-2009.
+   - Social housing sectors are significant in many European countries, often larger than private rental sectors, indicating strong governmental support for social housing.
 
 ## Hypotheses on Variables Influencing Apartment Prices in Frankfurt
 
