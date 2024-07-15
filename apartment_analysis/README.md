@@ -13,8 +13,7 @@ The results of the literature review are documented in the Read.me file within t
 The web scraping process is done in a file name scraper in the folder.
 
 
-
-### Summary of the Code:
+### Summary of the Data Analysis Code:
 
 This Jupyter notebook performs a comprehensive data analysis workflow, including:
 
@@ -25,4 +24,6 @@ This Jupyter notebook performs a comprehensive data analysis workflow, including
 5. **Model Building**: Training and evaluating various machine learning models such as Linear Regression, Random Forest, and Ridge Regression.
 6. **Text Analysis**: Generating a word cloud to visualize frequent terms in text data.
 
-This notebook provides a complete end-to-end process from data cleaning to model evaluation and visualization, ensuring that the data is well-understood and properly prepared for predictive modeling.
+
+### Results:
+Folder for analysis results.
